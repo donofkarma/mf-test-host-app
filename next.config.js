@@ -7,10 +7,10 @@ const nextConfig = {
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: "next1",
+        name: "host",
         filename: "remoteEntry.js",
         remotes: {
-          remote1: `remote1@http://localhost:3001/${
+          remote1: `remote1@${process.env.MODULE_PATH_REMOTE1}/${
             options.isServer ? "server" : "client"
           }/remoteEntry.js`,
         },
