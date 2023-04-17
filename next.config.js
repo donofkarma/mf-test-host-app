@@ -10,9 +10,9 @@ const nextConfig = {
         name: 'host',
         filename: 'remoteEntry.js',
         remotes: {
-          remote1: `remote1@${process.env.MODULE_PATH_PROTOCOL}${
-            process.env.MODULE_PATH_REMOTE1
-          }/${options.isServer ? 'server' : 'client'}/remoteEntry.js`,
+          remote1: `remote1@${process.env.MODULE_PATH_REMOTE1}/${
+            options.isServer ? 'server' : 'client'
+          }/remoteEntry.js`,
         },
       }),
     );
